@@ -26,6 +26,22 @@ function time_fun_views_api($module = NULL, $api = NULL) {
 function time_fun_image_default_styles() {
   $styles = array();
 
+  // Exported image style: gallery_thumbnail.
+  $styles['gallery_thumbnail'] = array(
+    'label' => 'Gallery Thumbnail',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '',
+          'height' => 165,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: masonry.
   $styles['masonry'] = array(
     'label' => 'Masonry',
