@@ -521,11 +521,11 @@ function time_fun_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_front__panel_context_c60f4769-547b-4762-ad6d-ffe18d06dcc5';
+  $handler->name = 'page_front__panel_context_496147fe-4209-44cf-bbb1-38dbcf8701e4';
   $handler->task = 'page';
   $handler->subtask = 'front';
   $handler->handler = 'panel_context';
-  $handler->weight = 1;
+  $handler->weight = 2;
   $handler->conf = array(
     'title' => 'Panel',
     'no_blocks' => 0,
@@ -581,6 +581,56 @@ function time_fun_default_page_manager_pages() {
     $display->content['new-a23c85d2-d6c3-4c8b-b721-f0c6933ff553'] = $pane;
     $display->panels['bottom_1'][0] = 'new-a23c85d2-d6c3-4c8b-b721-f0c6933ff553';
     $pane = new stdClass();
+    $pane->pid = 'new-1790cdb0-d931-4a4a-9513-155e083b370f';
+    $pane->panel = 'bottom_2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<img src="<?php print \'/\' . drupal_get_path(\'theme\',$GLOBALS[\'theme\']) . \'/images/giraffe.png\'; ?>" />',
+      'format' => 'php_code',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '1790cdb0-d931-4a4a-9513-155e083b370f';
+    $display->content['new-1790cdb0-d931-4a4a-9513-155e083b370f'] = $pane;
+    $display->panels['bottom_2'][0] = 'new-1790cdb0-d931-4a4a-9513-155e083b370f';
+    $pane = new stdClass();
+    $pane->pid = 'new-fa8aff32-f47d-423b-8682-a3c06f886213';
+    $pane->panel = 'bottom_2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Посмотреть все 2',
+      'title' => '',
+      'body' => '<br><a href="#" class="button alert expand radius">Посмотреть все &#9656;</a>',
+      'format' => 'php_code',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'fa8aff32-f47d-423b-8682-a3c06f886213';
+    $display->content['new-fa8aff32-f47d-423b-8682-a3c06f886213'] = $pane;
+    $display->panels['bottom_2'][1] = 'new-fa8aff32-f47d-423b-8682-a3c06f886213';
+    $pane = new stdClass();
     $pane->pid = 'new-fbf563a5-c1a2-4d2a-b207-a284cd1cf091';
     $pane->panel = 'middle_1';
     $pane->type = 'block';
@@ -627,6 +677,31 @@ function time_fun_default_page_manager_pages() {
     $display->content['new-3e240a69-2257-4734-bb3d-2afa70e27626'] = $pane;
     $display->panels['middle_2'][0] = 'new-3e240a69-2257-4734-bb3d-2afa70e27626';
     $pane = new stdClass();
+    $pane->pid = 'new-286aa7ed-ddfb-4bb3-ae5c-4383a8d8fe98';
+    $pane->panel = 'middle_2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Посмотреть все',
+      'title' => '',
+      'body' => '<br><a href="#" class="button alert expand radius">Посмотреть все &#9656;</a>',
+      'format' => 'php_code',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '286aa7ed-ddfb-4bb3-ae5c-4383a8d8fe98';
+    $display->content['new-286aa7ed-ddfb-4bb3-ae5c-4383a8d8fe98'] = $pane;
+    $display->panels['middle_2'][1] = 'new-286aa7ed-ddfb-4bb3-ae5c-4383a8d8fe98';
+    $pane = new stdClass();
     $pane->pid = 'new-edf9a72a-28af-451a-8a55-73f7a873e922';
     $pane->panel = 'top';
     $pane->type = 'custom';
@@ -635,12 +710,12 @@ function time_fun_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Слайдер',
-      'title' => '<none>',
-      'body' => '<ul class="slider" data-orbit data-options="animation_speed:1500;navigation_arrows: true; slide_number: false; bullets: false;">
+      'title' => '',
+      'body' => '<ul class="slider" data-orbit data-options="animation_speed:1500;navigation_arrows: true; slide_number: false; bullets: false; resume_on_mouseout: true;  timer_speed: 5000;">
  <li>
-  <img src="/<?php print drupal_get_path(\'theme\',$GLOBALS[\'theme\']) . \'/images/slide_kids.jpg\'; ?>" />
+  <a href="http://new.time-fun.ru/events/kvesty/kvest-detektiv-v-mire-zhivotnyh"><img src="/sites/time-fun.ru/files/slideshow/kvest-detektiv1_na_sait4_0.jpg"></a>
  </li>
-</ul>',
+ </ul>',
       'format' => 'php_code',
       'substitute' => TRUE,
     );
