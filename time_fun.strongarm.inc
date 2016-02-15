@@ -290,16 +290,16 @@ function time_fun_strongarm() {
   $strongarm->value = array(
     'time_fun' => array(
       'ckeditor_profile' => 'f066db22fd7fd72e8b80500df8618872',
-      'field_base' => '5a2ca6bc4ee1c3e265dd63142bc98589',
+      'field_base' => '82f0b34f6925c8770bb9321ac10ae072',
       'filter' => 'e5062546874cee15df4496975056148d',
       'language' => 'fa60130634819c3439d9349c578b9565',
       'menu_custom' => '71b1b46c0adc88db1ad3cd6c76860ed9',
       'taxonomy' => '6ec2b8e5d7bcba9f500a7a80346e9eb0',
-      'field_instance' => '6af1c161ac4a0c93f5de98ddf050fe60',
+      'field_instance' => '23d39109417a597d4f364d88cef8d4b5',
       'node' => 'cf3e3262460d7d5fc27930f7b901acf2',
-      'image' => 'dbb7246a3238bf604e42b390a8e79ab0',
-      'page_manager_pages' => '823aac2b9d94c81e1e734e99f33e189f',
-      'views_view' => 'c45e41478d030990b5c777873045d0d8',
+      'image' => '3f90dc094571a3af9c8af3f71f45a694',
+      'page_manager_pages' => '8954423b410b0eb9932beff552be04cf',
+      'views_view' => '3389503b4edcde70cb40c58a969ddb46',
       'dependencies' => 'fc56ff057e5bfdb792b31d89456e8a7d',
       'user_role' => '57d23ee3deb6e9262fa3b2617586b072',
       'menu_links' => '78fd44e0eab1f29c2e11f056f267642e',
@@ -885,7 +885,6 @@ function time_fun_strongarm() {
     68 => 'modules/node/node.js',
     69 => 'misc/autocomplete.js',
     70 => 'sites/time-fun.ru/modules/features/features.js',
-    'refresh:ru' => 'waiting',
   );
   $export['javascript_parsed'] = $strongarm;
 

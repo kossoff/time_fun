@@ -85,6 +85,14 @@ function time_fun_image_default_styles() {
  */
 function time_fun_node_info() {
   $items = array(
+    'acknowledgement' => array(
+      'name' => t('Благодарность'),
+      'base' => 'node_content',
+      'description' => t('Письма, грамоты, дипломы и др. бумаги.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'event' => array(
       'name' => t('Мероприятие'),
       'base' => 'node_content',
