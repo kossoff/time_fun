@@ -29,6 +29,22 @@ function time_fun_views_api($module = NULL, $api = NULL) {
 function time_fun_image_default_styles() {
   $styles = array();
 
+  // Exported image style: acknowledgement.
+  $styles['acknowledgement'] = array(
+    'label' => 'Acknowledgement',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 332,
+          'height' => '',
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: gallery_thumbnail.
   $styles['gallery_thumbnail'] = array(
     'label' => 'Gallery Thumbnail',

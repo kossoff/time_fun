@@ -13,6 +13,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_acknowledgement';
+  $strongarm->value = 'edit-webform';
+  $export['additional_settings__active_tab_acknowledgement'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_event';
   $strongarm->value = 'edit-webform';
   $export['additional_settings__active_tab_event'] = $strongarm;
@@ -105,21 +112,21 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cron_last';
-  $strongarm->value = 1455014923;
+  $strongarm->value = 1455558120;
   $export['cron_last'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'css_js_query_string';
-  $strongarm->value = 'o2a6lm';
+  $strongarm->value = 'o2lez9';
   $export['css_js_query_string'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'ctools_last_cron';
-  $strongarm->value = 1454970639;
+  $strongarm->value = 1455529242;
   $export['ctools_last_cron'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -292,9 +299,12 @@ function time_fun_strongarm() {
       'node' => 'cf3e3262460d7d5fc27930f7b901acf2',
       'image' => 'dbb7246a3238bf604e42b390a8e79ab0',
       'page_manager_pages' => '823aac2b9d94c81e1e734e99f33e189f',
-      'views_view' => '82f7ba95523a68a0d9e61354645105ef',
-      'dependencies' => '90fe0f1f0193fb7b199f02a812550894',
+      'views_view' => 'c45e41478d030990b5c777873045d0d8',
+      'dependencies' => 'fc56ff057e5bfdb792b31d89456e8a7d',
       'user_role' => '57d23ee3deb6e9262fa3b2617586b072',
+      'menu_links' => '78fd44e0eab1f29c2e11f056f267642e',
+      'variable' => '17f7f919c6a5047783e7e01b2961e90b',
+      'page_manager_handlers' => '032e3e44c3ec44f763755fa03e26d615',
     ),
   );
   $export['features_codecache'] = $strongarm;
@@ -319,6 +329,45 @@ function time_fun_strongarm() {
   $strongarm->name = 'features_semaphore';
   $strongarm->value = array();
   $export['features_semaphore'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__acknowledgement';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '3',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__acknowledgement'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -770,32 +819,73 @@ function time_fun_strongarm() {
     2 => 'misc/jquery.once.js',
     3 => 'sites/time-fun.ru/themes/adminimal_theme/js/jRespond.js',
     4 => 'sites/time-fun.ru/themes/adminimal_theme/js/adminimal_theme.js',
-    5 => 'misc/jquery.cookie.js',
-    6 => 'misc/jquery.form.js',
-    7 => 'misc/progress.js',
-    8 => 'sites/time-fun.ru/modules/jquery_update/js/jquery_update.js',
-    9 => 'misc/ajax.js',
-    10 => 'misc/ui/jquery.ui.core.min.js',
-    11 => 'sites/time-fun.ru/modules/ctools/js/modal.js',
-    12 => 'sites/time-fun.ru/modules/modal_forms/js/modal_forms_popup.js',
-    13 => 'misc/batch.js',
-    14 => 'sites/time-fun.ru/themes/adminimal_theme/skins/default/default.js',
-    15 => 'modules/toolbar/toolbar.js',
-    16 => 'misc/tableheader.js',
-    17 => 'misc/form.js',
-    18 => 'misc/collapse.js',
+    5 => 'sites/time-fun.ru/modules/panels/js/panels-base.js',
+    6 => 'sites/time-fun.ru/modules/panels/js/layout.js',
+    7 => 'sites/time-fun.ru/modules/ctools/js/dependent.js',
+    8 => 'misc/progress.js',
+    9 => 'sites/time-fun.ru/modules/jquery_update/js/jquery_update.js',
+    10 => 'misc/ajax.js',
+    11 => 'misc/jquery.cookie.js',
+    12 => 'misc/jquery.form.js',
+    13 => 'misc/ui/jquery.ui.core.min.js',
+    14 => 'sites/time-fun.ru/modules/ctools/js/modal.js',
+    15 => 'sites/time-fun.ru/themes/adminimal_theme/skins/default/default.js',
+    16 => 'modules/toolbar/toolbar.js',
+    17 => 'sites/time-fun.ru/modules/ctools/js/dropdown.js',
+    18 => 'sites/time-fun.ru/modules/panels/js/display_editor.js',
+    19 => 'sites/time-fun.ru/modules/jquery_update/replace/jquery/1.10/jquery.min.js',
+    20 => 'sites/time-fun.ru/themes/zurb_foundation/js/vendor/modernizr.js',
+    21 => 'sites/time-fun.ru/themes/fun/js/foundation.min.js',
+    22 => 'sites/time-fun.ru/themes/fun/js/libs.min.js',
+    23 => 'sites/time-fun.ru/themes/fun/js/app.min.js',
+    24 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/external/jquery.cookie.js',
+    25 => 'sites/time-fun.ru/modules/jquery_update/replace/misc/jquery.form.min.js',
+    26 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js',
+    27 => 'sites/time-fun.ru/modules/modal_forms/js/modal_forms_popup.js',
+    28 => 'modules/contextual/contextual.js',
+    29 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/ui/minified/jquery.ui.effect.min.js',
+    30 => 'sites/time-fun.ru/modules/back_to_top/js/back_to_top.js',
+    31 => 'sites/time-fun.ru/modules/views/js/base.js',
+    32 => 'sites/time-fun.ru/modules/views/js/ajax.js',
+    33 => 'sites/time-fun.ru/modules/ctools/js/dropbutton.js',
+    34 => 'misc/ui/jquery.ui.widget.min.js',
+    35 => 'misc/ui/jquery.ui.tabs.min.js',
+    36 => 'misc/ui/jquery.ui.button.min.js',
+    37 => 'misc/ui/jquery.ui.mouse.min.js',
+    38 => 'misc/ui/jquery.ui.draggable.min.js',
+    39 => 'misc/ui/jquery.ui.position.min.js',
+    40 => 'misc/ui/jquery.ui.resizable.min.js',
+    41 => 'misc/ui/jquery.ui.dialog.min.js',
+    42 => 'sites/time-fun.ru/modules/views/js/jquery.ui.dialog.patch.js',
+    43 => 'sites/time-fun.ru/modules/ctools/js/collapsible-div.js',
+    44 => 'misc/tabledrag.js',
+    45 => 'sites/time-fun.ru/modules/views/js/views-admin.js',
+    46 => 'misc/form.js',
+    47 => 'misc/states.js',
+    48 => 'misc/collapse.js',
+    49 => 'misc/textarea.js',
+    50 => 'misc/tableheader.js',
+    51 => 'misc/tableselect.js',
+    52 => 'misc/machine-name.js',
+    53 => 'modules/menu/menu.admin.js',
+    54 => 'sites/time-fun.ru/modules/webform/js/node-type-form.js',
+    55 => 'misc/vertical-tabs.js',
+    56 => 'modules/node/content_types.js',
+    57 => 'modules/field_ui/field_ui.js',
+    58 => 'sites/time-fun.ru/modules/token/token.js',
+    59 => 'sites/time-fun.ru/modules/ckeditor/includes/ckeditor.utils.js',
+    60 => 'modules/field/modules/text/text.js',
+    61 => 'modules/filter/filter.js',
+    62 => 'modules/file/file.js',
+    63 => 'sites/time-fun.ru/modules/ctools/js/auto-submit.js',
+    64 => 'sites/time-fun.ru/modules/ctools/page_manager/js/page-list.js',
+    65 => 'sites/time-fun.ru/modules/views/js/ajax_view.js',
+    66 => 'sites/time-fun.ru/modules/multiupload_filefield_widget/mfw.js',
+    67 => 'sites/time-fun.ru/modules/pathauto/pathauto.js',
+    68 => 'modules/node/node.js',
+    69 => 'misc/autocomplete.js',
+    70 => 'sites/time-fun.ru/modules/features/features.js',
     'refresh:ru' => 'waiting',
-    19 => 'sites/time-fun.ru/modules/features/features.js',
-    20 => 'misc/machine-name.js',
-    21 => 'misc/autocomplete.js',
-    22 => 'misc/ui/jquery.ui.widget.min.js',
-    23 => 'misc/ui/jquery.ui.button.min.js',
-    24 => 'misc/ui/jquery.ui.mouse.min.js',
-    25 => 'misc/ui/jquery.ui.draggable.min.js',
-    26 => 'misc/ui/jquery.ui.position.min.js',
-    27 => 'misc/ui/jquery.ui.resizable.min.js',
-    28 => 'misc/ui/jquery.ui.dialog.min.js',
-    29 => 'sites/time-fun.ru/modules/views/js/jquery.ui.dialog.patch.js',
   );
   $export['javascript_parsed'] = $strongarm;
 
@@ -1214,6 +1304,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_acknowledgement';
+  $strongarm->value = '0';
+  $export['language_content_type_acknowledgement'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_event';
   $strongarm->value = '0';
   $export['language_content_type_event'] = $strongarm;
@@ -1388,6 +1485,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_acknowledgement';
+  $strongarm->value = array();
+  $export['menu_options_acknowledgement'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_event';
   $strongarm->value = array();
   $export['menu_options_event'] = $strongarm;
@@ -1419,6 +1523,13 @@ function time_fun_strongarm() {
   $strongarm->name = 'menu_options_video_youtube_vimeo';
   $strongarm->value = array();
   $export['menu_options_video_youtube_vimeo'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_acknowledgement';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_acknowledgement'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1466,8 +1577,17 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_cron_last';
-  $strongarm->value = '1454950122';
+  $strongarm->value = '1455530916';
   $export['node_cron_last'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_acknowledgement';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_acknowledgement'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1524,6 +1644,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_acknowledgement';
+  $strongarm->value = '1';
+  $export['node_preview_acknowledgement'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_event';
   $strongarm->value = '1';
   $export['node_preview_event'] = $strongarm;
@@ -1555,6 +1682,13 @@ function time_fun_strongarm() {
   $strongarm->name = 'node_preview_video_youtube_vimeo';
   $strongarm->value = '1';
   $export['node_preview_video_youtube_vimeo'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_acknowledgement';
+  $strongarm->value = 0;
+  $export['node_submitted_acknowledgement'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1618,6 +1752,20 @@ function time_fun_strongarm() {
   $strongarm->name = 'page_manager_term_view_disabled';
   $strongarm->value = FALSE;
   $export['page_manager_term_view_disabled'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_acknowledgement';
+  $strongarm->value = '';
+  $export['page_title_type_acknowledgement'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_acknowledgement_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_acknowledgement_showfield'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2088,6 +2236,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'save_continue_acknowledgement';
+  $strongarm->value = 'Сохранить и добавить поля';
+  $export['save_continue_acknowledgement'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_event';
   $strongarm->value = 'Сохранить и добавить поля';
   $export['save_continue_event'] = $strongarm;
@@ -2232,7 +2387,7 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'update_last_check';
-  $strongarm->value = 1455022572;
+  $strongarm->value = 1455558122;
   $export['update_last_check'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2283,6 +2438,15 @@ function time_fun_strongarm() {
   $strongarm->name = 'user_register';
   $strongarm->value = 2;
   $export['user_register'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_block_hashes';
+  $strongarm->value = array(
+    '80712bba0b55479505bb34d5cef55721' => 'feedbacks-block_acknowledgements',
+  );
+  $export['views_block_hashes'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2374,6 +2538,13 @@ function time_fun_strongarm() {
   $strongarm->name = 'views_ui_show_sql_query_where';
   $strongarm->value = 'above';
   $export['views_ui_show_sql_query_where'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'webform_node_acknowledgement';
+  $strongarm->value = 0;
+  $export['webform_node_acknowledgement'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

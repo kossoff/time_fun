@@ -669,19 +669,94 @@ function time_fun_default_page_manager_pages() {
     'name' => 'panel',
   );
   $display = new panels_display();
-  $display->layout = 'foundation_1col';
+  $display->layout = 'goldenratio';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'middle' => NULL,
+      'top23' => NULL,
+      'top13' => NULL,
+      'bottom13' => NULL,
+      'bottom23' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Наши друзья о нас';
   $display->uuid = '3a088b0b-bffc-432d-bc13-23d11ad6dd7b';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-43d2c059-ed37-4fe2-9c6b-42f695e94d3e';
+    $pane->panel = 'top13';
+    $pane->type = 'block';
+    $pane->subtype = 'views-80712bba0b55479505bb34d5cef55721';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => 'Благодарности от наших клиентов',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '43d2c059-ed37-4fe2-9c6b-42f695e94d3e';
+    $display->content['new-43d2c059-ed37-4fe2-9c6b-42f695e94d3e'] = $pane;
+    $display->panels['top13'][0] = 'new-43d2c059-ed37-4fe2-9c6b-42f695e94d3e';
+    $pane = new stdClass();
+    $pane->pid = 'new-6f514353-7cf6-477a-acfc-50679b18827e';
+    $pane->panel = 'top23';
+    $pane->type = 'block';
+    $pane->subtype = 'views-feedbacks-block_feedbacks';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '6f514353-7cf6-477a-acfc-50679b18827e';
+    $display->content['new-6f514353-7cf6-477a-acfc-50679b18827e'] = $pane;
+    $display->panels['top23'][0] = 'new-6f514353-7cf6-477a-acfc-50679b18827e';
+    $pane = new stdClass();
+    $pane->pid = 'new-ee1cfc11-a562-4e3d-b3fb-16fd023050d5';
+    $pane->panel = 'top23';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Оставить отзыв',
+      'title' => '<none>',
+      'body' => '<a class="button expand radius" href="#">Оставить отзыв &#9656;</a>',
+      'format' => 'php_code',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'ee1cfc11-a562-4e3d-b3fb-16fd023050d5';
+    $display->content['new-ee1cfc11-a562-4e3d-b3fb-16fd023050d5'] = $pane;
+    $display->panels['top23'][1] = 'new-ee1cfc11-a562-4e3d-b3fb-16fd023050d5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
