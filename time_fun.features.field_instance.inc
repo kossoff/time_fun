@@ -1087,7 +1087,7 @@ function time_fun_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1134,7 +1134,7 @@ function time_fun_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 2,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1159,7 +1159,7 @@ function time_fun_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -1180,7 +1180,7 @@ function time_fun_field_default_field_instances() {
           'video_style' => 'normal',
         ),
         'type' => 'video_embed_field',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1191,7 +1191,7 @@ function time_fun_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_video_youtube_vimeo',
-    'label' => 'Видео',
+    'label' => 'Видео (Youtube, Vimeo)',
     'required' => 1,
     'settings' => array(
       'allowed_providers' => array(
@@ -1204,10 +1204,10 @@ function time_fun_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => NULL,
+      'module' => 'video_embed_field',
       'settings' => array(),
-      'type' => NULL,
-      'weight' => 1,
+      'type' => 'video_embed_field_video',
+      'weight' => 2,
     ),
   );
 
@@ -1259,7 +1259,7 @@ function time_fun_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Image');
-  t('Видео');
+  t('Видео (Youtube, Vimeo)');
   t('Возраст до');
   t('Возраст от');
   t('Время');
