@@ -1367,6 +1367,23 @@ function time_fun_views_default_views() {
 
   /* Display: Блок на странице мероприятия */
   $handler = $view->new_display('block', 'Блок на странице мероприятия', 'block_context');
+
+  /* Display: Блок на странице Галерея */
+  $handler = $view->new_display('block', 'Блок на странице Галерея', 'block_gallery');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Видео (Youtube, Vimeo) */
+  $handler->display->display_options['fields']['field_video_youtube_vimeo']['id'] = 'field_video_youtube_vimeo';
+  $handler->display->display_options['fields']['field_video_youtube_vimeo']['table'] = 'field_data_field_video_youtube_vimeo';
+  $handler->display->display_options['fields']['field_video_youtube_vimeo']['field'] = 'field_video_youtube_vimeo';
+  $handler->display->display_options['fields']['field_video_youtube_vimeo']['label'] = '';
+  $handler->display->display_options['fields']['field_video_youtube_vimeo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video_youtube_vimeo']['click_sort_column'] = 'video_url';
+  $handler->display->display_options['fields']['field_video_youtube_vimeo']['type'] = 'video_embed_field_thumbnail';
+  $handler->display->display_options['fields']['field_video_youtube_vimeo']['settings'] = array(
+    'image_style' => 'acknowledgement',
+    'image_link' => 'source',
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $translatables['video'] = array(
     t('Master'),
     t('Видео'),
@@ -1378,6 +1395,7 @@ function time_fun_views_default_views() {
     t('Desc'),
     t('Все'),
     t('Блок на странице мероприятия'),
+    t('Блок на странице Галерея'),
   );
   $export['video'] = $view;
 
