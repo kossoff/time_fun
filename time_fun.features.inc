@@ -112,6 +112,14 @@ function time_fun_node_info() {
       'title_label' => t('Заголовок'),
       'help' => '',
     ),
+    'feedback_l' => array(
+      'name' => t('Отзыв (левый)'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Основная страница'),
       'base' => 'node_content',

@@ -34,6 +34,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_feedback_l';
+  $strongarm->value = 'edit-webform';
+  $export['additional_settings__active_tab_feedback_l'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_photo';
   $strongarm->value = 'edit-webform';
   $export['additional_settings__active_tab_photo'] = $strongarm;
@@ -112,21 +119,21 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cron_last';
-  $strongarm->value = 1456407268;
+  $strongarm->value = 1456769374;
   $export['cron_last'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'css_js_query_string';
-  $strongarm->value = 'o2sk03';
+  $strongarm->value = 'o3b0zq';
   $export['css_js_query_string'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'ctools_last_cron';
-  $strongarm->value = 1456407269;
+  $strongarm->value = 1456740708;
   $export['ctools_last_cron'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -427,6 +434,26 @@ function time_fun_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__feedback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__feedback_l';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '2',
+        ),
+        'path' => array(
+          'weight' => '4',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__feedback_l'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -829,54 +856,57 @@ function time_fun_strongarm() {
     12 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js',
     13 => 'sites/time-fun.ru/modules/ctools/js/modal.js',
     14 => 'sites/time-fun.ru/modules/modal_forms/js/modal_forms_popup.js',
-    15 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/ui/minified/jquery.ui.effect.min.js',
-    16 => 'sites/time-fun.ru/modules/back_to_top/js/back_to_top.js',
-    17 => 'modules/toolbar/toolbar.js',
-    18 => 'misc/jquery.js',
-    19 => 'sites/time-fun.ru/themes/adminimal_theme/js/jRespond.js',
-    20 => 'sites/time-fun.ru/themes/adminimal_theme/js/adminimal_theme.js',
-    21 => 'misc/tableheader.js',
-    22 => 'modules/block/block.js',
-    23 => 'misc/jquery.cookie.js',
-    24 => 'misc/tabledrag.js',
-    25 => 'sites/time-fun.ru/themes/adminimal_theme/skins/default/default.js',
-    26 => 'sites/time-fun.ru/modules/ckeditor/includes/ckeditor.utils.js',
-    27 => 'misc/textarea.js',
-    28 => 'misc/form.js',
-    29 => 'modules/filter/filter.js',
-    30 => 'misc/collapse.js',
-    31 => 'misc/vertical-tabs.js',
-    32 => 'modules/contextual/contextual.js',
-    33 => 'sites/time-fun.ru/modules/views/js/base.js',
-    34 => 'sites/time-fun.ru/modules/views/js/ajax_view.js',
-    35 => 'sites/time-fun.ru/modules/ctools/js/dropdown.js',
-    36 => 'misc/jquery.form.js',
-    37 => 'misc/ui/jquery.ui.core.min.js',
-    38 => 'sites/time-fun.ru/modules/panels/js/panels-base.js',
-    39 => 'sites/time-fun.ru/modules/panels/js/display_editor.js',
-    40 => 'sites/time-fun.ru/modules/ctools/js/dependent.js',
-    41 => 'sites/time-fun.ru/modules/ctools/js/dropbutton.js',
-    42 => 'sites/time-fun.ru/modules/ctools/js/auto-submit.js',
-    43 => 'sites/time-fun.ru/modules/ctools/page_manager/js/page-list.js',
-    44 => 'sites/time-fun.ru/modules/panels/js/layout.js',
-    45 => 'misc/jquery.ba-bbq.js',
-    46 => 'sites/time-fun.ru/modules/views/js/views-list.js',
-    47 => 'sites/time-fun.ru/modules/views/js/ajax.js',
-    48 => 'misc/ui/jquery.ui.widget.min.js',
-    49 => 'misc/ui/jquery.ui.tabs.min.js',
-    50 => 'misc/ui/jquery.ui.button.min.js',
-    51 => 'misc/ui/jquery.ui.mouse.min.js',
-    52 => 'misc/ui/jquery.ui.draggable.min.js',
-    53 => 'misc/ui/jquery.ui.position.min.js',
-    54 => 'misc/ui/jquery.ui.resizable.min.js',
-    55 => 'misc/ui/jquery.ui.dialog.min.js',
-    56 => 'sites/time-fun.ru/modules/views/js/jquery.ui.dialog.patch.js',
-    57 => 'sites/time-fun.ru/modules/ctools/js/collapsible-div.js',
-    58 => 'sites/time-fun.ru/modules/views/js/views-admin.js',
-    59 => 'sites/time-fun.ru/modules/features/features.js',
+    15 => 'modules/contextual/contextual.js',
+    16 => 'sites/time-fun.ru/modules/views/js/base.js',
+    17 => 'sites/time-fun.ru/modules/views/js/ajax_view.js',
+    18 => 'modules/toolbar/toolbar.js',
+    19 => 'misc/jquery.js',
+    20 => 'sites/time-fun.ru/themes/adminimal_theme/js/jRespond.js',
+    21 => 'sites/time-fun.ru/themes/adminimal_theme/js/adminimal_theme.js',
+    22 => 'sites/time-fun.ru/modules/ctools/js/dependent.js',
+    23 => 'misc/form.js',
+    24 => 'misc/collapse.js',
+    25 => 'misc/textarea.js',
+    26 => 'misc/jquery.cookie.js',
+    27 => 'misc/jquery.form.js',
+    28 => 'sites/time-fun.ru/modules/views/js/ajax.js',
+    29 => 'sites/time-fun.ru/modules/ctools/js/dropbutton.js',
+    30 => 'misc/ui/jquery.ui.core.min.js',
+    31 => 'misc/ui/jquery.ui.widget.min.js',
+    32 => 'misc/ui/jquery.ui.tabs.min.js',
+    33 => 'misc/ui/jquery.ui.button.min.js',
+    34 => 'misc/ui/jquery.ui.mouse.min.js',
+    35 => 'misc/ui/jquery.ui.draggable.min.js',
+    36 => 'misc/ui/jquery.ui.position.min.js',
+    37 => 'misc/ui/jquery.ui.resizable.min.js',
+    38 => 'misc/ui/jquery.ui.dialog.min.js',
+    39 => 'sites/time-fun.ru/modules/views/js/jquery.ui.dialog.patch.js',
+    40 => 'sites/time-fun.ru/modules/ctools/js/collapsible-div.js',
+    41 => 'misc/tabledrag.js',
+    42 => 'sites/time-fun.ru/modules/views/js/views-admin.js',
+    43 => 'sites/time-fun.ru/themes/adminimal_theme/skins/default/default.js',
+    44 => 'sites/time-fun.ru/modules/views_php/views_php.js',
+    45 => 'misc/states.js',
+    46 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/ui/minified/jquery.ui.effect.min.js',
+    47 => 'sites/time-fun.ru/modules/back_to_top/js/back_to_top.js',
+    48 => 'misc/tableheader.js',
+    49 => 'misc/machine-name.js',
+    50 => 'modules/menu/menu.admin.js',
+    51 => 'sites/time-fun.ru/modules/webform/js/node-type-form.js',
+    52 => 'misc/vertical-tabs.js',
+    53 => 'modules/node/content_types.js',
+    54 => 'modules/field_ui/field_ui.js',
+    55 => 'sites/time-fun.ru/modules/token/token.js',
+    56 => 'misc/tableselect.js',
+    57 => 'misc/autocomplete.js',
+    58 => 'sites/time-fun.ru/modules/ckeditor/includes/ckeditor.utils.js',
+    59 => 'modules/field/modules/text/text.js',
+    60 => 'modules/filter/filter.js',
+    61 => 'sites/time-fun.ru/modules/ctools/js/auto-submit.js',
+    62 => 'misc/jquery.ba-bbq.js',
+    63 => 'sites/time-fun.ru/modules/views/js/views-list.js',
+    64 => 'sites/time-fun.ru/modules/features/features.js',
     'refresh:ru' => 'waiting',
-    60 => 'misc/machine-name.js',
-    61 => 'misc/autocomplete.js',
   );
   $export['javascript_parsed'] = $strongarm;
 
@@ -1316,6 +1346,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_feedback_l';
+  $strongarm->value = '0';
+  $export['language_content_type_feedback_l'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_photo';
   $strongarm->value = '0';
   $export['language_content_type_photo'] = $strongarm;
@@ -1497,6 +1534,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_feedback_l';
+  $strongarm->value = array();
+  $export['menu_options_feedback_l'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_photo';
   $strongarm->value = array();
   $export['menu_options_photo'] = $strongarm;
@@ -1535,6 +1579,13 @@ function time_fun_strongarm() {
   $strongarm->name = 'menu_parent_feedback';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_feedback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_feedback_l';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_feedback_l'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1599,6 +1650,16 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_feedback_l';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_feedback_l'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_page';
   $strongarm->value = array(
     0 => 'status',
@@ -1656,6 +1717,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_feedback_l';
+  $strongarm->value = '1';
+  $export['node_preview_feedback_l'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_photo';
   $strongarm->value = '0';
   $export['node_preview_photo'] = $strongarm;
@@ -1694,6 +1762,13 @@ function time_fun_strongarm() {
   $strongarm->name = 'node_submitted_feedback';
   $strongarm->value = 0;
   $export['node_submitted_feedback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_feedback_l';
+  $strongarm->value = 0;
+  $export['node_submitted_feedback_l'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1778,6 +1853,20 @@ function time_fun_strongarm() {
   $strongarm->name = 'page_title_type_feedback';
   $strongarm->value = '';
   $export['page_title_type_feedback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_feedback_l';
+  $strongarm->value = '';
+  $export['page_title_type_feedback_l'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_feedback_l_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_feedback_l_showfield'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2248,6 +2337,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'save_continue_feedback_l';
+  $strongarm->value = 'Сохранить и добавить поля';
+  $export['save_continue_feedback_l'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_photo';
   $strongarm->value = 'Сохранить и добавить поля';
   $export['save_continue_photo'] = $strongarm;
@@ -2378,7 +2474,7 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'update_last_check';
-  $strongarm->value = 1456407272;
+  $strongarm->value = 1456769681;
   $export['update_last_check'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2551,6 +2647,13 @@ function time_fun_strongarm() {
   $strongarm->name = 'webform_node_feedback';
   $strongarm->value = 0;
   $export['webform_node_feedback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'webform_node_feedback_l';
+  $strongarm->value = 0;
+  $export['webform_node_feedback_l'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

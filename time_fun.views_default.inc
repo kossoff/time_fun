@@ -568,9 +568,9 @@ function time_fun_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['class'] = 'large-block-grid-3 ';
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -683,7 +683,7 @@ function time_fun_views_default_views() {
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['view_node']['alter']['text'] = '<div>
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = '<div class="wrapper" data-equalizer-watch>
 <div class="event-datetime"><i class="fa fa-calendar fw"></i>&nbsp;[field_event_date]</div>
 <div class="event-datetime"><i class="fa fa-clock-o"></i>&nbsp;[field_event_time]</div>
 [php]
@@ -910,6 +910,13 @@ function time_fun_views_default_views() {
     t('Past events block'),
     t('<i class="fa fa-calendar fw"></i>&nbsp;[field_event_date]'),
     t('&nbsp;[field_event_time]'),
+    t('<div class="wrapper" data-equalizer-watch>
+<div class="event-datetime"><i class="fa fa-calendar fw"></i>&nbsp;[field_event_date]</div>
+<div class="event-datetime"><i class="fa fa-clock-o"></i>&nbsp;[field_event_time]</div>
+[php]
+<div class="event-age-from-wrapper"><span class="event-age-from">[field_event_age_from]</span></div>
+[title]
+</div>'),
     t('Past list Filtered'),
     t('Past events block w Filter by event type'),
   );
@@ -993,6 +1000,7 @@ function time_fun_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'feedback' => 'feedback',
+    'feedback_l' => 'feedback_l',
   );
 
   /* Display: Отзывы */
@@ -1012,6 +1020,7 @@ function time_fun_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'feedback' => 'feedback',
+    'feedback_l' => 'feedback_l',
   );
 
   /* Display: Благодарности */
@@ -1098,6 +1107,7 @@ function time_fun_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Видео';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1149,6 +1159,7 @@ function time_fun_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $translatables['gallery'] = array(
     t('Master'),
+    t('Видео'),
     t('more'),
     t('Apply'),
     t('Reset'),
