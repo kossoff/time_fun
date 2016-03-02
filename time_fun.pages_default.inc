@@ -848,9 +848,9 @@ function time_fun_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
+      'admin_title' => 'Жираф',
       'title' => '',
-      'body' => '<img src="<?php print \'/\' . drupal_get_path(\'theme\',$GLOBALS[\'theme\']) . \'/images/giraffe.png\'; ?>" />',
+      'body' => '<a href="/meropriyatiya/den-rozhdeniya"><img src="<?php print \'/\' . drupal_get_path(\'theme\',$GLOBALS[\'theme\']) . \'/images/giraffe.png\'; ?>" /></a>',
       'format' => 'php_code',
       'substitute' => TRUE,
     );
@@ -875,7 +875,7 @@ function time_fun_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Посмотреть все 2',
       'title' => '',
-      'body' => '<br><a href="#" class="button alert expand radius">Посмотреть все &#9656;</a>',
+      'body' => '<br><a href="/meropriyatiya/year" class="button alert expand radius">Мероприятия за год &#9656;</a>',
       'format' => 'php_code',
       'substitute' => TRUE,
     );
@@ -946,7 +946,7 @@ function time_fun_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Посмотреть все',
       'title' => '',
-      'body' => '<br><a href="#" class="button alert expand radius">Посмотреть все &#9656;</a>',
+      'body' => '<br><a href="/meropriyatiya/upcoming" class="button alert expand radius">Посмотреть все &#9656;</a>',
       'format' => 'php_code',
       'substitute' => TRUE,
     );
