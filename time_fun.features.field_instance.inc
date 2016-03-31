@@ -1153,6 +1153,46 @@ function time_fun_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-video_vk-field_video_vk'.
+  $field_instances['node-video_vk-field_video_vk'] = array(
+    'bundle' => 'video_vk',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_video_vk',
+    'label' => 'Ссылка на видео',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-video_vk-field_video_vk_cover'.
   $field_instances['node-video_vk-field_video_vk_cover'] = array(
     'bundle' => 'video_vk',
@@ -1403,6 +1443,7 @@ function time_fun_field_default_field_instances() {
   t('Обложка');
   t('Описание');
   t('Отзыв');
+  t('Ссылка на видео');
   t('Стоимость участия');
 
   return $field_instances;

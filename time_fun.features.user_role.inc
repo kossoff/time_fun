@@ -16,5 +16,11 @@ function time_fun_user_default_roles() {
     'weight' => 2,
   );
 
+  // Exported role: редактор.
+  $roles['редактор'] = array(
+    'name' => 'редактор',
+    'weight' => 3,
+  );
+
   return $roles;
 }

@@ -1255,7 +1255,7 @@ function time_fun_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Видео';
+  $handler->display->display_options['title'] = 'Фотографии';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1307,7 +1307,7 @@ function time_fun_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $translatables['gallery'] = array(
     t('Master'),
-    t('Видео'),
+    t('Фотографии'),
     t('more'),
     t('Apply'),
     t('Reset'),

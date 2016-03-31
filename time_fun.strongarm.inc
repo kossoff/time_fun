@@ -62,9 +62,23 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_webform';
+  $strongarm->value = 'edit-workflow';
+  $export['additional_settings__active_tab_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'admin_theme';
   $strongarm->value = 'adminimal';
   $export['admin_theme'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'anonymous';
+  $strongarm->value = 'Гость';
+  $export['anonymous'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -119,21 +133,21 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cron_last';
-  $strongarm->value = 1456941170;
+  $strongarm->value = 1459450935;
   $export['cron_last'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'css_js_query_string';
-  $strongarm->value = 'o3et0o';
+  $strongarm->value = 'o4jftm';
   $export['css_js_query_string'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'ctools_last_cron';
-  $strongarm->value = 1456906068;
+  $strongarm->value = 1459376684;
   $export['ctools_last_cron'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -237,6 +251,31 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'default_nodes_main';
+  $strongarm->value = '10';
+  $export['default_nodes_main'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'default_page_manager_handlers';
+  $strongarm->value = array(
+    'term_view__panel_context_65250ca8-f628-4fb8-9086-44f99672c6dc' => TRUE,
+  );
+  $export['default_page_manager_handlers'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'default_page_manager_pages';
+  $strongarm->value = array(
+    'front' => FALSE,
+  );
+  $export['default_page_manager_pages'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'drupal_http_request_fails';
   $strongarm->value = FALSE;
   $export['drupal_http_request_fails'] = $strongarm;
@@ -247,6 +286,13 @@ function time_fun_strongarm() {
   $strongarm->name = 'drupal_private_key';
   $strongarm->value = 'yORpN0S7vlrx75PyzzNiR7gErfk8uRbzLrYWvpAgl0A';
   $export['drupal_private_key'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'email__active_tab';
+  $strongarm->value = 'edit-email-admin-created';
+  $export['email__active_tab'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -302,15 +348,15 @@ function time_fun_strongarm() {
       'language' => 'fa60130634819c3439d9349c578b9565',
       'menu_custom' => '71b1b46c0adc88db1ad3cd6c76860ed9',
       'taxonomy' => '6ec2b8e5d7bcba9f500a7a80346e9eb0',
-      'field_instance' => '23f0ac07d49a32ecf53eb79ab92a1177',
+      'field_instance' => '7700a90ca012bb6f18e02e80855e40f7',
       'node' => '3a60249765bcbf6385cffc45e0de71b0',
       'image' => '3f90dc094571a3af9c8af3f71f45a694',
-      'page_manager_pages' => '8954423b410b0eb9932beff552be04cf',
-      'views_view' => '3389503b4edcde70cb40c58a969ddb46',
+      'page_manager_pages' => '3af02a3481725177b614e9d148e934fb',
+      'views_view' => '0d93feac8f88e7d8644a33ca471681bb',
       'dependencies' => '0fa9dadd2631b7a03ace21fdcdfbe95b',
       'user_role' => '57d23ee3deb6e9262fa3b2617586b072',
       'menu_links' => '78fd44e0eab1f29c2e11f056f267642e',
-      'variable' => '17f7f919c6a5047783e7e01b2961e90b',
+      'variable' => '1722a48a94b8d323a7818595a23cfc70',
       'page_manager_handlers' => '032e3e44c3ec44f763755fa03e26d615',
     ),
   );
@@ -499,7 +545,26 @@ function time_fun_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__video_vk';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
@@ -842,67 +907,73 @@ function time_fun_strongarm() {
   $strongarm->name = 'javascript_parsed';
   $strongarm->value = array(
     0 => 'misc/drupal.js',
-    1 => 'sites/time-fun.ru/modules/jquery_update/replace/jquery/1.10/jquery.min.js',
+    1 => 'misc/jquery.js',
     2 => 'misc/jquery.once.js',
-    3 => 'sites/time-fun.ru/themes/zurb_foundation/js/vendor/modernizr.js',
-    4 => 'sites/time-fun.ru/themes/fun/js/foundation.min.js',
-    5 => 'sites/time-fun.ru/themes/fun/js/libs.min.js',
-    6 => 'sites/time-fun.ru/themes/fun/js/app.min.js',
-    7 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/external/jquery.cookie.js',
-    8 => 'sites/time-fun.ru/modules/jquery_update/replace/misc/jquery.form.min.js',
-    9 => 'misc/progress.js',
-    10 => 'sites/time-fun.ru/modules/jquery_update/js/jquery_update.js',
-    11 => 'misc/ajax.js',
-    12 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js',
-    13 => 'sites/time-fun.ru/modules/ctools/js/modal.js',
-    14 => 'sites/time-fun.ru/modules/modal_forms/js/modal_forms_popup.js',
-    15 => 'modules/contextual/contextual.js',
-    16 => 'sites/time-fun.ru/modules/views/js/base.js',
-    17 => 'sites/time-fun.ru/modules/views/js/ajax_view.js',
-    18 => 'modules/toolbar/toolbar.js',
-    19 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/ui/minified/jquery.ui.effect.min.js',
-    20 => 'sites/time-fun.ru/modules/back_to_top/js/back_to_top.js',
-    21 => 'sites/time-fun.ru/modules/views/js/views-contextual.js',
-    22 => 'misc/jquery.js',
-    23 => 'sites/time-fun.ru/themes/adminimal_theme/js/jRespond.js',
-    24 => 'sites/time-fun.ru/themes/adminimal_theme/js/adminimal_theme.js',
-    25 => 'misc/jquery.cookie.js',
+    3 => 'sites/time-fun.ru/themes/adminimal_theme/js/jRespond.js',
+    4 => 'sites/time-fun.ru/themes/adminimal_theme/js/adminimal_theme.js',
+    5 => 'modules/system/system.js',
+    6 => 'misc/form.js',
+    7 => 'sites/time-fun.ru/themes/adminimal_theme/skins/default/default.js',
+    8 => 'misc/jquery.cookie.js',
+    9 => 'modules/toolbar/toolbar.js',
+    10 => 'sites/time-fun.ru/modules/jquery_update/replace/jquery/1.10/jquery.min.js',
+    11 => 'sites/time-fun.ru/themes/zurb_foundation/js/vendor/modernizr.js',
+    12 => 'sites/time-fun.ru/themes/fun/js/foundation.min.js',
+    13 => 'sites/time-fun.ru/themes/fun/js/libs.min.js',
+    14 => 'sites/time-fun.ru/themes/fun/js/app.min.js',
+    15 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/external/jquery.cookie.js',
+    16 => 'sites/time-fun.ru/modules/jquery_update/replace/misc/jquery.form.min.js',
+    17 => 'misc/progress.js',
+    18 => 'sites/time-fun.ru/modules/jquery_update/js/jquery_update.js',
+    19 => 'misc/ajax.js',
+    20 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js',
+    21 => 'sites/time-fun.ru/modules/ctools/js/modal.js',
+    22 => 'sites/time-fun.ru/modules/modal_forms/js/modal_forms_popup.js',
+    23 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/ui/minified/jquery.ui.effect.min.js',
+    24 => 'sites/time-fun.ru/modules/back_to_top/js/back_to_top.js',
+    25 => 'misc/autocomplete.js',
     26 => 'misc/jquery.form.js',
-    27 => 'sites/time-fun.ru/modules/views/js/ajax.js',
-    28 => 'sites/time-fun.ru/modules/ctools/js/dropbutton.js',
-    29 => 'misc/ui/jquery.ui.core.min.js',
-    30 => 'misc/ui/jquery.ui.widget.min.js',
-    31 => 'misc/ui/jquery.ui.tabs.min.js',
-    32 => 'misc/ui/jquery.ui.button.min.js',
-    33 => 'misc/ui/jquery.ui.mouse.min.js',
-    34 => 'misc/ui/jquery.ui.draggable.min.js',
-    35 => 'misc/ui/jquery.ui.position.min.js',
-    36 => 'misc/ui/jquery.ui.resizable.min.js',
-    37 => 'misc/ui/jquery.ui.dialog.min.js',
-    38 => 'sites/time-fun.ru/modules/views/js/jquery.ui.dialog.patch.js',
-    39 => 'sites/time-fun.ru/modules/ctools/js/dependent.js',
-    40 => 'sites/time-fun.ru/modules/ctools/js/collapsible-div.js',
-    41 => 'misc/tabledrag.js',
-    42 => 'sites/time-fun.ru/modules/views/js/views-admin.js',
-    43 => 'sites/time-fun.ru/themes/adminimal_theme/skins/default/default.js',
-    44 => 'sites/time-fun.ru/modules/ctools/js/dropdown.js',
-    45 => 'sites/time-fun.ru/modules/panels/js/panels-base.js',
-    46 => 'sites/time-fun.ru/modules/panels/js/display_editor.js',
-    47 => 'sites/time-fun.ru/modules/ckeditor/includes/ckeditor.utils.js',
-    48 => 'misc/textarea.js',
-    49 => 'misc/form.js',
-    50 => 'modules/filter/filter.js',
-    51 => 'misc/collapse.js',
-    52 => 'misc/farbtastic/farbtastic.js',
-    53 => 'sites/time-fun.ru/modules/calendar/js/calendar_colorpicker.js',
-    54 => 'misc/tableheader.js',
-    55 => 'modules/taxonomy/taxonomy.js',
-    56 => 'misc/machine-name.js',
-    57 => 'modules/field_ui/field_ui.js',
-    58 => 'sites/time-fun.ru/modules/features/features.js',
-    59 => 'misc/vertical-tabs.js',
+    27 => 'modules/file/file.js',
+    28 => 'sites/time-fun.ru/modules/ckeditor/includes/ckeditor.utils.js',
+    29 => 'modules/field/modules/text/text.js',
+    30 => 'misc/textarea.js',
+    31 => 'modules/filter/filter.js',
+    32 => 'misc/states.js',
+    33 => 'misc/collapse.js',
+    34 => 'sites/time-fun.ru/modules/pathauto/pathauto.js',
+    35 => 'modules/node/node.js',
+    36 => 'misc/vertical-tabs.js',
+    37 => 'misc/ui/jquery.ui.core.min.js',
+    38 => 'modules/contextual/contextual.js',
+    39 => 'sites/time-fun.ru/modules/views/js/base.js',
+    40 => 'sites/time-fun.ru/modules/views/js/ajax_view.js',
+    41 => 'misc/tableselect.js',
+    42 => 'misc/tableheader.js',
+    43 => 'sites/time-fun.ru/modules/views/js/views-contextual.js',
+    44 => 'modules/user/user.js',
+    45 => 'sites/time-fun.ru/modules/jquery_update/replace/ui/ui/minified/jquery.ui.datepicker.min.js',
+    46 => 'modules/locale/locale.datepicker.js',
+    47 => 'sites/time-fun.ru/modules/webform/js/webform.js',
+    48 => 'modules/menu/menu.js',
+    49 => 'misc/machine-name.js',
+    50 => 'modules/menu/menu.admin.js',
+    51 => 'sites/time-fun.ru/modules/webform/js/node-type-form.js',
+    52 => 'modules/node/content_types.js',
+    53 => 'misc/tabledrag.js',
+    54 => 'sites/time-fun.ru/modules/webform/js/webform-admin.js',
+    55 => 'misc/ui/jquery.ui.widget.min.js',
+    56 => 'misc/ui/jquery.ui.button.min.js',
+    57 => 'misc/ui/jquery.ui.mouse.min.js',
+    58 => 'misc/ui/jquery.ui.draggable.min.js',
+    59 => 'misc/ui/jquery.ui.position.min.js',
+    60 => 'misc/ui/jquery.ui.resizable.min.js',
+    61 => 'misc/ui/jquery.ui.dialog.min.js',
+    62 => 'sites/time-fun.ru/modules/views/js/jquery.ui.dialog.patch.js',
+    63 => 'sites/time-fun.ru/modules/token/token.js',
+    64 => 'sites/time-fun.ru/modules/webform/js/select-admin.js',
+    65 => 'sites/time-fun.ru/modules/token/jquery.treeTable.js',
+    66 => 'sites/time-fun.ru/modules/features/features.js',
     'refresh:ru' => 'waiting',
-    60 => 'misc/autocomplete.js',
   );
   $export['javascript_parsed'] = $strongarm;
 
@@ -945,7 +1016,7 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'l10n_update_last_check';
-  $strongarm->value = 1455022576;
+  $strongarm->value = 1458811363;
   $export['l10n_update_last_check'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -999,44 +1070,6 @@ function time_fun_strongarm() {
         'language' => 'ru',
       ),
     ),
-    'features' => array(
-      'ru' => (object) array(
-        'name' => 'features',
-        'project_type' => 'module',
-        'core' => '7.x',
-        'version' => '7.x-2.7',
-        'server_pattern' => 'http://ftp.drupal.org/files/translations/%core/%project/%project-%release.%language.po',
-        'status' => '1',
-        'project' => 'features',
-        'langcode' => 'ru',
-        'type' => '',
-        'timestamp' => 0,
-        'last_checked' => 0,
-        'files' => array(
-          'remote' => (object) array(
-            'project' => 'features',
-            'langcode' => 'ru',
-            'version' => '7.x-2.7',
-            'type' => 'remote',
-            'filename' => 'features-7.x-2.7.ru.po',
-            'uri' => 'http://ftp.drupal.org/files/translations/7.x/features/features-7.x-2.7.ru.po',
-          ),
-          'local' => (object) array(
-            'project' => 'features',
-            'langcode' => 'ru',
-            'version' => '7.x-2.7',
-            'type' => 'local',
-            'filename' => 'features-7.x-2.7.ru.po',
-            'directory' => 'translations://',
-            'uri' => 'translations://features-7.x-2.7.ru.po',
-          ),
-        ),
-        'language' => 'ru',
-        'filename' => '',
-        'fileurl' => '',
-        'uri' => '',
-      ),
-    ),
     'fun' => array(
       'ru' => (object) array(
         'name' => 'fun',
@@ -1070,51 +1103,6 @@ function time_fun_strongarm() {
           ),
         ),
         'language' => 'ru',
-      ),
-    ),
-    'libraries' => array(
-      'ru' => (object) array(
-        'name' => 'libraries',
-        'project_type' => 'module',
-        'core' => '7.x',
-        'version' => '7.x-2.2',
-        'server_pattern' => 'http://ftp.drupal.org/files/translations/%core/%project/%project-%release.%language.po',
-        'status' => '1',
-        'project' => 'libraries',
-        'langcode' => 'ru',
-        'type' => 'current',
-        'timestamp' => '1453290977',
-        'last_checked' => '1453290977',
-        'files' => array(
-          'remote' => (object) array(
-            'project' => 'libraries',
-            'langcode' => 'ru',
-            'version' => '7.x-2.2',
-            'type' => 'remote',
-            'filename' => 'libraries-7.x-2.2.ru.po',
-            'uri' => 'http://ftp.drupal.org/files/translations/7.x/libraries/libraries-7.x-2.2.ru.po',
-          ),
-          'local' => (object) array(
-            'project' => 'libraries',
-            'langcode' => 'ru',
-            'version' => '7.x-2.2',
-            'type' => 'local',
-            'filename' => 'libraries-7.x-2.2.ru.po',
-            'directory' => 'translations://',
-            'uri' => 'translations://libraries-7.x-2.2.ru.po',
-          ),
-          'current' => (object) array(
-            'project' => 'libraries',
-            'language' => 'ru',
-            'filename' => 'libraries-7.x-2.2.ru.po',
-            'version' => '7.x-2.2',
-            'uri' => 'translations://libraries-7.x-2.2.ru.po',
-            'timestamp' => '1453290977',
-            'last_checked' => '1453290977',
-            'langcode' => 'ru',
-            'type' => 'current',
-          ),
-        ),
       ),
     ),
     'menu_attributes' => array(
@@ -1189,45 +1177,6 @@ function time_fun_strongarm() {
             'timestamp' => 1454161326,
             'directory' => 'translations://',
             'last_checked' => 1454161326,
-            'language' => 'ru',
-          ),
-        ),
-        'language' => 'ru',
-      ),
-    ),
-    'strongarm' => array(
-      'ru' => (object) array(
-        'name' => 'strongarm',
-        'project_type' => 'module',
-        'core' => '7.x',
-        'version' => '7.x-2.0',
-        'server_pattern' => 'http://ftp.drupal.org/files/translations/%core/%project/%project-%release.%language.po',
-        'status' => '1',
-        'project' => 'strongarm',
-        'langcode' => 'ru',
-        'type' => 'current',
-        'timestamp' => 1455022576,
-        'last_checked' => 1455022575,
-        'files' => array(
-          'remote' => (object) array(
-            'project' => 'strongarm',
-            'langcode' => 'ru',
-            'version' => '7.x-2.0',
-            'type' => 'remote',
-            'filename' => 'strongarm-7.x-2.0.ru.po',
-            'uri' => 'https://ftp.drupal.org/files/translations/7.x/strongarm/strongarm-7.x-2.0.ru.po',
-            'timestamp' => 1339605246,
-          ),
-          'local' => (object) array(
-            'project' => 'strongarm',
-            'langcode' => 'ru',
-            'version' => '7.x-2.0',
-            'type' => 'local',
-            'filename' => 'strongarm-7.x-2.0.ru.po',
-            'uri' => 'translations://strongarm-7.x-2.0.ru.po',
-            'timestamp' => 1455022576,
-            'directory' => 'translations://',
-            'last_checked' => 1455022575,
             'language' => 'ru',
           ),
         ),
@@ -1370,6 +1319,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_webform';
+  $strongarm->value = '0';
+  $export['language_content_type_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_count';
   $strongarm->value = 2;
   $export['language_count'] = $strongarm;
@@ -1389,7 +1345,7 @@ function time_fun_strongarm() {
     'domain' => '',
     'prefix' => 'ru',
     'weight' => '0',
-    'javascript' => 'hNarerTbFMukVUUNJiLXwJ8cNn_hX6WIlQuAnQv3FmA',
+    'javascript' => 'kZgMicFjy0PqDRkNMSbZPZayzR0WVY4Aza5USMa8wms',
   );
   $export['language_default'] = $strongarm;
 
@@ -1446,6 +1402,15 @@ function time_fun_strongarm() {
     'language_url' => FALSE,
   );
   $export['language_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'mail_system';
+  $strongarm->value = array(
+    'default-system' => 'SmtpMailSystem',
+  );
+  $export['mail_system'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1558,6 +1523,15 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_webform';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_acknowledgement';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_acknowledgement'] = $strongarm;
@@ -1607,6 +1581,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_webform';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_admin_theme';
   $strongarm->value = 1;
   $export['node_admin_theme'] = $strongarm;
@@ -1615,7 +1596,7 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_cron_last';
-  $strongarm->value = '1455609367';
+  $strongarm->value = '1459450785';
   $export['node_cron_last'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1692,6 +1673,15 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_webform';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_acknowledgement';
   $strongarm->value = '1';
   $export['node_preview_acknowledgement'] = $strongarm;
@@ -1737,6 +1727,13 @@ function time_fun_strongarm() {
   $strongarm->name = 'node_preview_video_youtube_vimeo';
   $strongarm->value = '1';
   $export['node_preview_video_youtube_vimeo'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_webform';
+  $strongarm->value = '1';
+  $export['node_preview_webform'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1793,6 +1790,13 @@ function time_fun_strongarm() {
   $strongarm->name = 'node_submitted_video_youtube_vimeo';
   $strongarm->value = 0;
   $export['node_submitted_video_youtube_vimeo'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_webform';
+  $strongarm->value = 0;
+  $export['node_submitted_webform'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1912,6 +1916,20 @@ function time_fun_strongarm() {
   $strongarm->name = 'page_title_type_video_youtube_vimeo_showfield';
   $strongarm->value = 0;
   $export['page_title_type_video_youtube_vimeo_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_webform';
+  $strongarm->value = '';
+  $export['page_title_type_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_webform_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_webform_showfield'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2361,6 +2379,20 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'site_403';
+  $strongarm->value = '';
+  $export['site_403'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_404';
+  $strongarm->value = '';
+  $export['site_404'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'site_default_country';
   $strongarm->value = 'RU';
   $export['site_default_country'] = $strongarm;
@@ -2376,7 +2408,7 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_mail';
-  $strongarm->value = 'info@time-fun.ru';
+  $strongarm->value = 'site@time-fun.ru';
   $export['site_mail'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2385,6 +2417,118 @@ function time_fun_strongarm() {
   $strongarm->name = 'site_name';
   $strongarm->value = 'Время веселья';
   $export['site_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_slogan';
+  $strongarm->value = '';
+  $export['site_slogan'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_allowhtml';
+  $strongarm->value = 1;
+  $export['smtp_allowhtml'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_debugging';
+  $strongarm->value = 0;
+  $export['smtp_debugging'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_from';
+  $strongarm->value = 'site@time-fun.ru';
+  $export['smtp_from'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_fromname';
+  $strongarm->value = 'Время веселья';
+  $export['smtp_fromname'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_host';
+  $strongarm->value = 'smtp.yandex.ru';
+  $export['smtp_host'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_hostbackup';
+  $strongarm->value = '';
+  $export['smtp_hostbackup'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_library';
+  $strongarm->value = 'sites/time-fun.ru/modules/smtp/smtp.module';
+  $export['smtp_library'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_on';
+  $strongarm->value = '1';
+  $export['smtp_on'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_password';
+  $strongarm->value = 'Jfe4qr8X';
+  $export['smtp_password'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_port';
+  $strongarm->value = '465';
+  $export['smtp_port'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_previous_mail_system';
+  $strongarm->value = 'DefaultMailSystem';
+  $export['smtp_previous_mail_system'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_protocol';
+  $strongarm->value = 'ssl';
+  $export['smtp_protocol'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_queue';
+  $strongarm->value = 0;
+  $export['smtp_queue'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_test_address';
+  $strongarm->value = '';
+  $export['smtp_test_address'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'smtp_username';
+  $strongarm->value = 'site@time-fun.ru';
+  $export['smtp_username'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2470,7 +2614,7 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'update_last_check';
-  $strongarm->value = 1456941172;
+  $strongarm->value = 1459450937;
   $export['update_last_check'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2483,6 +2627,13 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'user_cancel_method';
+  $strongarm->value = 'user_cancel_block';
+  $export['user_cancel_method'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_default_timezone';
   $strongarm->value = '0';
   $export['user_default_timezone'] = $strongarm;
@@ -2490,9 +2641,231 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'user_email_verification';
+  $strongarm->value = 0;
+  $export['user_email_verification'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_cancel_confirm_body';
+  $strongarm->value = '[user:name],
+
+На сайте «[site:name]» поступил запрос на удаление вашей учётной записи.
+
+Удалить её с сайта [site:url-brief] можно щёлкнув по следующей ссылке или скопировав её в адресную строку браузера:
+
+[user:cancel-url]
+
+ВНИМАНИЕ: Удаление учётной записи необратимо!
+
+Эта ссылка действительна в течение суток, и, если по ней не пройти, то ничего не случится.
+
+-- Команда сайта "[site:name]"';
+  $export['user_mail_cancel_confirm_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_cancel_confirm_subject';
+  $strongarm->value = 'Запрос на удаление учётной записи [user:name] на сайте «[site:name]»';
+  $export['user_mail_cancel_confirm_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_password_reset_body';
+  $strongarm->value = '[user:name], 
+
+На сайте «[site:name]» поступил запрос на сброс пароля для Вашей учётной записи.
+
+Вы можете войти на сайт, щёлкнув по следующей ссылке, или скопировав её в адресную строку браузера:
+
+[user:one-time-login-url] 
+
+Эта одноразовая ссылка для входа на сайт ведёт на страницу задания нового пароля. Она действительна в течение суток, и, если по ней не пройти, то ничего не случится.
+
+-- Команда сайта «[site:name]»';
+  $export['user_mail_password_reset_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_password_reset_subject';
+  $strongarm->value = 'Смена данных для входа пользователя [user:name] на сайте «[site:name]»';
+  $export['user_mail_password_reset_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_admin_created_body';
+  $strongarm->value = '[user:name],
+
+Администратор сайта «[site:name]» создал для вас учётную запись. Можете войти на сайт, щёлкнув по следующей ссылке, или скопировав её в адресную строку браузера:
+
+[user:one-time-login-url]
+
+Эта одноразовая ссылка для входа на сайт ведёт на страницу задания своего пароля.
+
+После установки пароля войти на сайт можно на странице [site:login-url], введя:
+
+пользователь: [user:name]
+пароль: ваш пароль 
+
+-- Команда сайта «[site:name]»';
+  $export['user_mail_register_admin_created_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_admin_created_subject';
+  $strongarm->value = 'Администратор сайта «[site:name]» создал для вас учётную запись';
+  $export['user_mail_register_admin_created_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_no_approval_required_body';
+  $strongarm->value = '[user:name], 
+
+Спасибо за регистрацию на сайте «[site:name]». Можете войти на сайт, щёлкнув по следующей ссылке, или скопировав её в адресную строку браузера:
+
+[user:one-time-login-url] 
+
+Эта одноразовая ссылка для входа на сайт ведёт на страницу задания вашего пароля.
+
+После установки пароля войти на сайт можно на странице [site:login-url], введя:
+
+пользователь: [user:name]
+пароль: ваш пароль 
+
+-- Команда сайта «[site:name]»';
+  $export['user_mail_register_no_approval_required_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_no_approval_required_subject';
+  $strongarm->value = 'Детали учётной записи [user:name] на сайте «[site:name]»';
+  $export['user_mail_register_no_approval_required_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_pending_approval_body';
+  $strongarm->value = '[user:name], 
+
+Спасибо за регистрацию на сайте «[site:name]». В настоящее время ваша заявка ожидает одобрения администратором. Когда она будет принята, Вы получите другое письмо, в котором будет указано, как войти и установить пароль, а также сообщаются прочие детали. 
+
+-- Команда сайта «[site:name]»';
+  $export['user_mail_register_pending_approval_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_pending_approval_subject';
+  $strongarm->value = 'Детали учётной записи [user:name] на сайте «[site:name]» (ожидает одобрения администратором)';
+  $export['user_mail_register_pending_approval_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_status_activated_body';
+  $strongarm->value = '[user:name], 
+
+Ваша учётная запись на сайте «[site:name]» активирована.
+
+Теперь Вы можете войти на сайт, щёлкнув по следующей ссылке, или скопировав её в адресную строку браузера:
+
+[user:one-time-login-url] 
+
+Эта одноразовая ссылка для входа на сайт ведёт на страницу задания своего пароля.
+
+После установки пароля войти на сайт можно на странице [site:login-url], введя:
+
+пользователь: [user:name]
+пароль: ваш пароль 
+
+-- Команда сайта «[site:name]»';
+  $export['user_mail_status_activated_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_status_activated_notify';
+  $strongarm->value = 1;
+  $export['user_mail_status_activated_notify'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_status_activated_subject';
+  $strongarm->value = 'Детали учётной записи [user:name] на сайте «[site:name]» (одобрено)';
+  $export['user_mail_status_activated_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_status_blocked_body';
+  $strongarm->value = '[user:name],
+
+Ваша учётная запись на сайте «[site:name]» была заблокирована.
+
+-- Команда сайта «[site:name]»';
+  $export['user_mail_status_blocked_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_status_blocked_notify';
+  $strongarm->value = 0;
+  $export['user_mail_status_blocked_notify'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_status_blocked_subject';
+  $strongarm->value = 'Детали учётной записи [user:name] на сайте «[site:name]» (заблокировано)';
+  $export['user_mail_status_blocked_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_status_canceled_body';
+  $strongarm->value = '[user:name],
+
+Ваша учётная запись на сайте «[site:name]» удалена.
+
+-- Команда сайта «[site:name]»';
+  $export['user_mail_status_canceled_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_status_canceled_notify';
+  $strongarm->value = 0;
+  $export['user_mail_status_canceled_notify'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_status_canceled_subject';
+  $strongarm->value = 'Детали учётной записи [user:name] на сайте «[site:name]» (удалено)';
+  $export['user_mail_status_canceled_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_pictures';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['user_pictures'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_picture_default';
+  $strongarm->value = '';
+  $export['user_picture_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2511,6 +2884,20 @@ function time_fun_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'user_picture_guidelines';
+  $strongarm->value = '';
+  $export['user_picture_guidelines'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_picture_path';
+  $strongarm->value = 'pictures';
+  $export['user_picture_path'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_picture_style';
   $strongarm->value = 'thumbnail';
   $export['user_picture_style'] = $strongarm;
@@ -2519,8 +2906,15 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_register';
-  $strongarm->value = 2;
+  $strongarm->value = '1';
   $export['user_register'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_signatures';
+  $strongarm->value = 0;
+  $export['user_signatures'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
