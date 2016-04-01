@@ -133,7 +133,7 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cron_last';
-  $strongarm->value = 1459450935;
+  $strongarm->value = 1459492692;
   $export['cron_last'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -147,7 +147,7 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'ctools_last_cron';
-  $strongarm->value = 1459376684;
+  $strongarm->value = 1459492693;
   $export['ctools_last_cron'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -343,21 +343,21 @@ function time_fun_strongarm() {
   $strongarm->value = array(
     'time_fun' => array(
       'ckeditor_profile' => 'f066db22fd7fd72e8b80500df8618872',
-      'field_base' => 'ba906873be1bcd33664bc4ff7d637936',
+      'field_base' => 'c66c60650ff4b71d3a6f9829667586f8',
       'filter' => 'e5062546874cee15df4496975056148d',
       'language' => 'fa60130634819c3439d9349c578b9565',
       'menu_custom' => '71b1b46c0adc88db1ad3cd6c76860ed9',
       'taxonomy' => '6ec2b8e5d7bcba9f500a7a80346e9eb0',
-      'field_instance' => '7700a90ca012bb6f18e02e80855e40f7',
+      'field_instance' => '1767914d982deb63567a8bfc0bf07852',
       'node' => '3a60249765bcbf6385cffc45e0de71b0',
       'image' => '3f90dc094571a3af9c8af3f71f45a694',
       'page_manager_pages' => '3af02a3481725177b614e9d148e934fb',
-      'views_view' => '0d93feac8f88e7d8644a33ca471681bb',
+      'views_view' => 'c216cc8b849f9cc3004163a8c8d43819',
       'dependencies' => '0fa9dadd2631b7a03ace21fdcdfbe95b',
-      'user_role' => '57d23ee3deb6e9262fa3b2617586b072',
+      'user_role' => '8c67e57aefbdcb9f11eb5c54d5d8d744',
       'menu_links' => '78fd44e0eab1f29c2e11f056f267642e',
-      'variable' => '1722a48a94b8d323a7818595a23cfc70',
-      'page_manager_handlers' => '032e3e44c3ec44f763755fa03e26d615',
+      'variable' => '7cd9a25d69248f811ba30e01ff5f6667',
+      'page_manager_handlers' => '05eda6f5078cd9b872074283fc0b3af4',
     ),
   );
   $export['features_codecache'] = $strongarm;
@@ -973,7 +973,17 @@ function time_fun_strongarm() {
     64 => 'sites/time-fun.ru/modules/webform/js/select-admin.js',
     65 => 'sites/time-fun.ru/modules/token/jquery.treeTable.js',
     66 => 'sites/time-fun.ru/modules/features/features.js',
-    'refresh:ru' => 'waiting',
+    67 => 'sites/time-fun.ru/modules/views/js/ajax.js',
+    68 => 'sites/time-fun.ru/modules/ctools/js/dropbutton.js',
+    69 => 'misc/ui/jquery.ui.tabs.min.js',
+    70 => 'sites/time-fun.ru/modules/ctools/js/dependent.js',
+    71 => 'sites/time-fun.ru/modules/ctools/js/collapsible-div.js',
+    72 => 'sites/time-fun.ru/modules/views/js/views-admin.js',
+    73 => 'sites/time-fun.ru/modules/views_php/views_php.js',
+    74 => 'modules/field_ui/field_ui.js',
+    75 => 'sites/time-fun.ru/modules/ctools/js/auto-submit.js',
+    76 => 'misc/jquery.ba-bbq.js',
+    77 => 'sites/time-fun.ru/modules/views/js/views-list.js',
   );
   $export['javascript_parsed'] = $strongarm;
 
@@ -1345,7 +1355,7 @@ function time_fun_strongarm() {
     'domain' => '',
     'prefix' => 'ru',
     'weight' => '0',
-    'javascript' => 'kZgMicFjy0PqDRkNMSbZPZayzR0WVY4Aza5USMa8wms',
+    'javascript' => 'jHhZdHyRd--yrkmpLoy3OVx4053n-VkqnfaQrmMRbdM',
   );
   $export['language_default'] = $strongarm;
 
@@ -2614,7 +2624,7 @@ function time_fun_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'update_last_check';
-  $strongarm->value = 1459450937;
+  $strongarm->value = 1459492696;
   $export['update_last_check'] = $strongarm;
 
   $strongarm = new stdClass();

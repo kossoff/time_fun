@@ -870,9 +870,9 @@ function time_fun_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['class'] = 'large-block-grid-3';
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -928,27 +928,37 @@ function time_fun_views_default_views() {
   $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php']['php_output'] = '<?php
   $node = node_load($data->nid);
-
-        $type_img = \'quests.png\';
+        $type = \'quests\';
         switch ($node->field_event_category[\'und\'][0][\'tid\']) {
           case 1:
-            $type_img = \'quests.png\';
+            $type = \'quests\';
             break;
           case 2:
-            $type_img = \'holidays.png\';
+            $type = \'holidays\';
             break;
           case 3:
-            $type_img = \'camps.png\';
+            $type = \'camps\';
             break;
           case 4:
-            $type_img = \'growth.png\';
+            $type = \'growth\';
             break;
         }
-?>
-<img src="<?php print \'/\' . drupal_get_path(\'theme\',$GLOBALS[\'theme\']) . \'/images/\' . $type_img; ?>">
- ';
+
+  print $type;
+?>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_1']['id'] = 'php_1';
+  $handler->display->display_options['fields']['php_1']['table'] = 'views';
+  $handler->display->display_options['fields']['php_1']['field'] = 'php';
+  $handler->display->display_options['fields']['php_1']['label'] = '';
+  $handler->display->display_options['fields']['php_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_1']['php_output'] = '<?php print \'/\' . drupal_get_path(\'theme\',$GLOBALS[\'theme\']) . \'/images/\'; ?>';
+  $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
   /* Field: Content: Возраст от */
   $handler->display->display_options['fields']['field_event_age_from']['id'] = 'field_event_age_from';
   $handler->display->display_options['fields']['field_event_age_from']['table'] = 'field_data_field_event_age_from';
@@ -985,10 +995,10 @@ function time_fun_views_default_views() {
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['view_node']['alter']['text'] = '<div>
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = '<div class="wrapper [php]" data-equalizer-watch>
 <div class="event-datetime"><i class="fa fa-calendar fw"></i>&nbsp;[field_event_date]</div>
 <div class="event-datetime"><i class="fa fa-clock-o"></i>&nbsp;[field_event_time]</div>
-[php]
+<img src="[php_1][php].png">
 <div class="event-age-from-wrapper"><span class="event-age-from">[field_event_age_from]</span></div>
 [title]
 </div>';
@@ -1067,6 +1077,13 @@ function time_fun_views_default_views() {
     t('Past list Filtered'),
     t('Past events block w Filter by event type'),
     t('&nbsp;[field_event_time]'),
+    t('<div class="wrapper [php]" data-equalizer-watch>
+<div class="event-datetime"><i class="fa fa-calendar fw"></i>&nbsp;[field_event_date]</div>
+<div class="event-datetime"><i class="fa fa-clock-o"></i>&nbsp;[field_event_time]</div>
+<img src="[php_1][php].png">
+<div class="event-age-from-wrapper"><span class="event-age-from">[field_event_age_from]</span></div>
+[title]
+</div>'),
   );
   $export['calendar_events'] = $view;
 

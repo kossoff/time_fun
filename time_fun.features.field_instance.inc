@@ -434,7 +434,7 @@ function time_fun_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'file',
-          'image_style' => 'gallery_thumbnail',
+          'image_style' => 'masonry',
         ),
         'type' => 'image',
         'weight' => 10,
